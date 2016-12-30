@@ -1,0 +1,32 @@
+{
+	"compilerOptions": {
+		"outDir": "./dist",
+		"sourceMap": true,
+		"noImplicitAny": true,
+		"noImplicitReturns": true,
+		"module": "commonjs",
+		"target": "ES5",
+		"jsx": "react",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+		"removeComments": true,
+		"experimentalDecorators": true,
+		"types": [
+			"core-js",
+			"whatwg-fetch",
+			"react",
+			"react-dom"
+		],
+		"baseUrl": "src"
+	},
+	"include": [
+		"*.ts",
+		"./src/**/*.ts",
+		"./src/**/*.tsx",
+		"./type-declarations/**/*.d.ts"
+	],
+	"exclude": [
+		"node_modules",
+		"./dist"
+	]
+}
