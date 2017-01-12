@@ -14,4 +14,4 @@ npm start
 - [ ] dll build
 - [x] css extract
 - [ ] code splitting
-- [ ] redux
+- [x] redux
