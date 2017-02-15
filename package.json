@@ -6,15 +6,35 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development node dev-server",
     "build": "rimraf dist && cross-env NODE_ENV=production webpack --progress --colors --hide-modules --config webpack.config.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --verbose"
   },
   "keywords": [
     "typescript",
     "react"
   ],
   "author": "graysheep",
+  "jest": {
+    "testPathDirs": [
+      "./src"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "ts",
+      "tsx"
+    ],
+    "testRegex": "/__tests__/.*\\.(ts|tsx|js)$",
+    "transform": {
+      "^.+\\.(ts|tsx)$": "<rootDir>/preprocessor.js"
+    },
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less|scss)$": "<rootDir>/__mocks__/styleMock.js"
+    }
+  },
   "devDependencies": {
     "@types/core-js": "^0.9.34",
+    "@types/enzyme": "^2.7.4",
+    "@types/jest": "^18.1.1",
     "@types/react": "^0.14.55",
     "@types/react-dom": "^0.14.17",
     "@types/react-redux": "^4.4.35",
@@ -23,11 +43,15 @@
     "@types/whatwg-fetch": "0.0.32",
     "cross-env": "^3.1.2",
     "css-loader": "^0.25.0",
+    "enzyme": "^2.7.1",
     "express": "^4.14.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
     "html-webpack-plugin": "^2.24.1",
+    "jest": "^18.1.0",
+    "jest-cli": "^18.1.0",
     "node-sass": "^4.1.1",
+    "react-addons-test-utils": "^15.4.2",
     "rimraf": "^2.5.4",
     "sass-loader": "^4.1.1",
     "source-map-loader": "^0.1.5",

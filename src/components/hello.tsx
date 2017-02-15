@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 class Hello extends React.Component<any, any> {
   render() {
     return (
-      <div>
+      <div className="hello">
         <p>
           <label>Counter: </label>
           <b>#{this.props.counter}</b>
@@ -29,5 +29,9 @@ const mapDispatchToProps = (dispatch: any) => ({
     dispatch({ type: 'INCR', by: -1 });
   }
 });
+
+export {
+  Hello
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(Hello);

@@ -15,7 +15,9 @@
 			"core-js",
 			"whatwg-fetch",
 			"react",
-			"react-dom"
+			"react-dom",
+      "jest",
+      "enzyme"
 		],
 		"baseUrl": "src"
 	},
