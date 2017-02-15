@@ -8,9 +8,14 @@ npm install
 npm start
 ```
 
+## unit test
+```bash
+npm test
+```
+
 ## todo
 - [x] tslint
-- [ ] unit test
+- [x] unit test
 - [ ] dll build
 - [x] css extract
 - [ ] code splitting
